@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block main %}
+  <h1><a href="/">Go to index page</a></h1>
+  <h2>Menu: {{ menu }}</h2>
+
+  {% for item in items %}
+    {% include 'tree_view_template.html' %}
+  {% endfor %}
+{% endblock main %}

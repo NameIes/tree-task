@@ -1,0 +1,10 @@
+<div style="margin-left: 15px;">
+    <a href="{{ item.obj.link }}">{{ item.obj }}</a>
+    {% if item.opened %}
+        {% for ch in item.childs %}
+            {% with item=ch template_name="tree_view_template.html" %}
+                {% include template_name %}
+            {% endwith %}
+        {% endfor %}
+    {% endif %}
+</div>
