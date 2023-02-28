@@ -1,0 +1,5 @@
+<h2>{{ menu }}</h2>
+{% for item in menu.tree_items.all %}
+  <a href="/{{ menu }}/{{ item }}/">{{ item }}</a>
+  <br>
+{% endfor %}
